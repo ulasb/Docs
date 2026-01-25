@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leveraging LLMs in Engineering Workflows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 1000px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+        
+        .tldr {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 15px 20px;
+            border-radius: 4px;
+            font-size: 0.95em;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            font-size: 1.15em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .card-icon {
+            font-size: 1.4em;
+        }
+        
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+        
+        .capabilities {
+            background: #f0f4ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .capabilities h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.15em;
+        }
+        
+        .capability-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .capability-item {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+            font-size: 0.95em;
+            color: #333;
+        }
+        
+        .capability-item strong {
+            color: #667eea;
+        }
+        
+        .risk-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .risk-card {
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+        }
+        
+        .risk-avoid {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .risk-mitigate {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .risk-card h4 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .risk-card p {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.85em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ Leveraging LLMs in Your Engineering Workflows</h1>
+        </div>
+        
+        <div class="tldr">
+            <strong>TL;DR:</strong> LLMs accelerate productivity through code generation, refactoring, and codebase understanding. The real risk isn't hallucinations—it's falling behind without them. Mitigate with proper testing and validation.
+        </div>
+        
+        <div class="capabilities">
+            <h3>🚀 What LLMs Can Actually Do</h3>
+            <div class="capability-list">
+                <div class="capability-item"><strong>Understand Systems:</strong> Analyze entire codebases and answer architectural questions</div>
+                <div class="capability-item"><strong>Refactor Code:</strong> Modernize, simplify, and optimize existing code</div>
+                <div class="capability-item"><strong>Migrate Systems:</strong> Large-scale language and paradigm shifts in hours, not weeks</div>
+                <div class="capability-item"><strong>Generate from Specs:</strong> Create production-ready code from PRDs and style guides</div>
+            </div>
+        </div>
+        
+        <div class="risk-section">
+            <div class="risk-card risk-avoid">
+                <h4>❌ The Cost of Avoidance</h4>
+                <p>Slower development cycles, lower productivity, reduced competitive advantage, and falling behind organizations already leveraging these tools at scale.</p>
+            </div>
+            <div class="risk-card risk-mitigate">
+                <h4>✅ The Mitigation Path</h4>
+                <p>Robust testing, effective metrics, alerting, and treating LLM-generated code the same as human-written code. Speed + Reliability.</p>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3><span class="card-icon">📈</span> The Productivity Gap</h3>
+                <p>Engineers without LLM integration operate at a fraction of their potential. Those adopting early aren't just coding faster—they're fundamentally changing how they work.</p>
+            </div>
+            <div class="card">
+                <h3><span class="card-icon">🏢</span> Industry Adoption</h3>
+                <p>This isn't experimental. Startups to major tech companies are seeing dramatic productivity increases. Standard practice is rapidly becoming the competitive baseline.</p>
+            </div>
+        </div>
+        
+        <div class="cta">
+            🎯 Start experimenting with LLMs in your workflows today. Shallow learning curve. Immediate payoff. The cost of waiting is real.
+        </div>
+        
+        <div class="footer">
+            Leveraging LLMs enables engineers to do better work faster
+        </div>
+    </div>
+</body>
+</html>
