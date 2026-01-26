@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyprus History Infographic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .infographic {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #d4af37 0%, #c19a2e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+            animation: slide 20s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #d4af37, #c19a2e);
+        }
+        
+        .era {
+            position: relative;
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        
+        .era::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #d4af37;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #d4af37;
+        }
+        
+        .era-title {
+            font-weight: bold;
+            color: #1e3c72;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .era-date {
+            color: #c19a2e;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .era-text {
+            color: #333;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+        
+        .division-box {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-left: 5px solid #c19a2e;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .division-box h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .stat {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #c19a2e;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        .footer-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .key-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .key-point {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic">
+        <div class="header">
+            <h1>🇨🇾 CYPRUS</h1>
+            <p>From Ancient Copper Traders to Europe's Last Divided Capital</p>
+        </div>
+        
+        <div class="content">
+            <div class="timeline">
+                <div class="era">
+                    <div class="era-title">Ancient Cyprus</div>
+                    <div class="era-date">12,000 BCE - 333 BCE</div>
+                    <div class="era-text">Settlement dating back 12,000 years. Named after copper ("kypros"). Mycenaean Greeks established city-kingdoms, shaping the island's Greek identity.</div>
+                </div>
+                
+                <div class="era">
+                    <div class="era-title">Age of Empires</div>
+                    <div class="era-date">333 BCE - 1191 CE</div>
+                    <div class="era-text">Ruled by Assyrians, Persians, Alexander the Great, Ptolemaic Egypt, Rome, and Byzantine Empire. Became first Christian-governed Roman province.</div>
+                </div>
+                
+                <div class="era">
+                    <div class="era-title">Crusaders & Venice</div>
+                    <div class="era-date">1192 - 1571</div>
+                    <div class="era-text">Lusignan dynasty established Frankish kingdom. Venice fortified cities against Ottoman expansion.</div>
+                </div>
+                
+                <div class="era">
+                    <div class="era-title">Ottoman Rule</div>
+                    <div class="era-date">1571 - 1878</div>
+                    <div class="era-text">300+ years under Ottoman control. Muslim settlers established Turkish Cypriot community. Greek Cypriots remained 80% majority. Growing desire for union with Greece (enosis).</div>
+                </div>
+                
+                <div class="era">
+                    <div class="era-title">British Colonial Era</div>
+                    <div class="era-date">1878 - 1960</div>
+                    <div class="era-text">British administration from 1878, formal colony from 1925. Greek Cypriots sought enosis; Turkish Cypriots opposed it, fearing persecution. EOKA launched armed campaign in 1955.</div>
+                </div>
+                
+                <div class="era">
+                    <div class="era-title">Independence & Crisis</div>
+                    <div class="era-date">1960 - 1963</div>
+                    <div class="era-text">Independence with complex constitution protecting both communities. Neither side satisfied. Constitutional breakdown led to "Bloody Christmas" violence in 1963.</div>
+                </div>
+            </div>
+            
+            <div class="division-box">
+                <h3>⚡ The 1974 Crisis: Coup & Invasion</h3>
+                <div class="era-text" style="margin-bottom: 15px;">
+                    <strong>July 15:</strong> Greek junta orchestrated coup against President Makarios<br>
+                    <strong>July 20:</strong> Turkey invaded, claiming guarantor rights<br>
+                    <strong>August:</strong> Second offensive secured 36-38% of island
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="stat-number">3,000+</span>
+                        <div class="stat-label">Deaths (mostly civilians)</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200,000</span>
+                        <div class="stat-label">Greek Cypriots displaced</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">60,000</span>
+                        <div class="stat-label">Turkish Cypriots displaced</div>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2,000+</span>
+                        <div class="stat-label">Still missing</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <div class="era">
+                    <div class="era-title">The Divided Island</div>
+                    <div class="era-date">1974 - Present</div>
+                    <div class="era-text">UN Buffer Zone (Green Line) divides island. Turkish Republic of Northern Cyprus declared 1983 (recognized only by Turkey). Republic of Cyprus joined EU 2004. Nicosia remains Europe's last divided capital. Multiple reunification attempts have failed, including 2004 Annan Plan.</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-title">Cyprus Today: A Frozen Conflict</div>
+            <div class="key-points">
+                <div class="key-point">🇪🇺 Only EU state under military occupation</div>
+                <div class="key-point">🪖 ~30,000 Turkish troops in north</div>
+                <div class="key-point">🚧 180km UN buffer zone</div>
+                <div class="key-point">🔑 Unresolved: property rights, security, governance</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
